@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <meta charset="utf-8"/>
+        <title>Calculadora JSF Histórico</title>
+        <style type="text/css">
+		h2{
+			margin-top: 100px;
+			margin-left: 400px;
+			margin-right: 400px;
+			text-align: center;
+		}
+		#divCampos {
+			margin-left: 400px;
+			margin-right: 400px;
+                        margin-top: 25px;
+			border-style: solid;
+			background-color: lightgray;
+		}
+		#numsDiv, #opcoes {
+			margin: 20px;
+		}
+		#pNum, #lblCalculo, #sNum, #lblResultado{
+			margin-right: 3px;
+		}
+		button{
+			margin: 5px;
+		}
+                #historico{
+                    border-style: groove;
+                    margin-bottom: 5px;
+                }
+	</style>
+    </h:head>
+    <h:body>
+        <div id="divCampos">
+            <div id="numsDiv">
+                <h4>Histórico</h4>
+                <div id="historico">
+                    <ol>
+                        <ui:repeat var="c" value="#{beanCalculadoraHistorico.historico}">
+                            <li>#{c}</li>
+                        </ui:repeat>
+                    </ol>
+                </div>
+                <h:form>
+                    <h4>Calculadora</h4>
+                    <h:inputText id="pNum" value="#{beanCalculadoraHistorico.a}"/>
+                    <h:selectOneMenu value="#{beanCalculadoraHistorico.operacao}">
+                        <f:selectItem itemValue="0" itemLabel="+"/>
+                        <f:selectItem itemValue="1" itemLabel="-"/>
+                    </h:selectOneMenu>
+
+                    <h:inputText value="#{beanCalculadoraHistorico.b}"/>
+                    <h:commandButton action="#{beanCalculadoraHistorico.calcular}" value="="/>
+                    <br/><br/><h:inputText value="#{beanCalculadoraHistorico.c}"/>
+                    <h:commandButton action="#{beanCalculadoraHistorico.limparPorIndice}" value="Limpar Indice"/>
+                    <br/><br/>
+                    <h:commandButton action="#{beanCalculadoraHistorico.limparHistorico}" value="Limpar Histórico"/>
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+
