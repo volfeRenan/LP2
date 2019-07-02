@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Calculadora JSF</title>
+        <style type="text/css">
+		h2{
+			margin-top: 100px;
+			margin-left: 400px;
+			margin-right: 400px;
+			text-align: center;
+		}
+		#divCampos {
+			margin-left: 400px;
+			margin-right: 400px;
+			border-style: solid;
+			background-color: lightgray;
+		}
+		#numsDiv, #opcoes {
+			margin: 20px;
+		}
+		#pNum, #lblCalculo, #sNum, #lblResultado{
+			margin-right: 3px;
+		}
+		button{
+			margin: 5px;
+		}
+	</style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h2>Calculadora</h2>
+            <div id="divCampos">
+		<div id="numsDiv">
+                    <h:inputText id="pNum" value="#{beanCalculadora.a}" />
+                    <h:selectOneMenu id="operador" value="#{beanCalculadora.operacao}">
+                        <f:selectItem itemValue="+" itemLabel="+"/>
+                        <f:selectItem itemValue="-" itemLabel="-"/>
+                        <f:selectItem itemValue="*" itemLabel="*"/>
+                        <f:selectItem itemValue="/" itemLabel="/"/>
+                    </h:selectOneMenu>
+                    <h:inputText id="sNum" value="#{beanCalculadora.b}" />
+                    <h:commandButton value=" = " action="#{beanCalculadora.efetuarOperacao}"/>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
