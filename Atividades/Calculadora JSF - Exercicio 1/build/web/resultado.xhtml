@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Resultado</title>
+        <style type="text/css">
+            body {
+                    background-color: gray;
+            }
+            h2{
+                    margin-top: 100px;
+                    margin-left: 400px;
+                    margin-right: 400px;
+                    text-align: center;
+            }
+            #divCampos {
+                    margin-left: 400px;
+                    margin-right: 400px;
+                    border-style: solid;
+                    background-color: lightgray;
+            }
+            #numsDiv h4{
+                text-align: center
+            }
+            #numsDiv, #opcoes {
+                    margin: 20px;
+            }
+            #pNum, #sNum, #lblResultado{
+                    margin-right: 20px;
+            }
+            button{
+                    margin: 5px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div id="divCampos">
+		<div id="numsDiv">
+                    <h4>Resultado</h4>
+                    <label>#{beanCalculadora.a}</label>
+                    <label id="lblCalculo">#{beanCalculadora.operacao}</label>
+                    <label>#{beanCalculadora.b}</label>
+                    <label> = </label>
+                    <label>#{beanCalculadora.resultado}</label>
+                    <br/>
+                    <a  href="index.xhtml">Novo Calculo</a>   
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
