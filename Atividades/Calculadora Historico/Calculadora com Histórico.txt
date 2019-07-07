@@ -1,0 +1,8 @@
+Grupo: Renan Volfe; Cleison Paganotto;
+
+Exercicio 1.1 - Utilizando o request ele ira excluir sempre a ultima
+requsição, ou seja, ira mostrar somente aa instancia atual.
+
+Exercicio 1.2 - Utilizando o Application ele mostra sempre as mesmas
+requisições em todas as instancias, no Session ele mostra sempre as 
+requisições sómente da intancia em questão.
