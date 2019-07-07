@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alterar Fonte</title>
+</head>
+<body>
+	<p><a id="link" href="http://www.google.com">Texto</a></p>
+	<button onclick="diminuirFonte()">Diminuir Fonte</button>
+	<button onclick="aumentarFonte()">Aumentar Fonte</button>
+	<button onclick="alterarHref()">Alterar HREF</button>
+
+	<script>
+		function diminuirFonte(){
+			document.documentElement.style.fontSize = "10px";
+		}
+		function aumentarFonte(){
+			document.documentElement.style.fontSize = "30px";
+		}
+		function alterarHref(){
+			var elLink = document.getElementById("link");
+			elLink.href = "http://yahoo.com";
+		}
+	</script>
+
+</body>
+</html>
