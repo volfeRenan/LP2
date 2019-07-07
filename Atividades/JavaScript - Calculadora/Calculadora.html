@@ -1,0 +1,90 @@
+<html>
+<meta charset="UTF-8" />
+	<title>Calculadora</title>
+<head>
+	<style type="text/css">
+		body {
+			background-color: gray;
+		}
+		h2{
+			margin-top: 100px;
+			margin-left: 400px;
+			margin-right: 400px;
+			text-align: center;
+		}
+		#divCampos {
+			margin-left: 400px;
+			margin-right: 400px;
+			border-style: solid;
+			background-color: lightgray;
+		}
+		#numsDiv, #opcoes {
+			margin: 20px;
+		}
+		#pNum, #lblCalculo, #sNum, #lblResultado{
+			margin-right: 20px;
+		}
+		button{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body >
+	<h2>CALCULADORA</h2>
+	<div id="divCampos">
+		<div id="numsDiv">
+			<input id="pNum" type="number" name="pNum" placeholder="1° N">
+			<label id="lblCalculo" name="calculo"></label>
+			<input id="sNum" type="number" name="sNum" placeholder="2° N">
+			<label id="lblResultado" name="lblResultado">=</label>
+			<label id="resultadoFinal" name="resultadoFinal"></label>
+		</div>
+		<div id="opcoes">
+			<button id="idSomar" onclick="somar()" name="somar">Somar (+)</button>
+			<button id="idSubtrair"  onclick="subtrair()" name="somar">Subtrair (-)</button>
+			<button id="idMultiplicar" onclick="multiplicar()" name="somar">Multiplicar (*)</button>
+			<button id="idDividir" onclick="dividir()" name="somar">Dividir (/)</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function somar(){
+			document.getElementById("lblCalculo").innerHTML = "+";
+			var pNum = document.getElementById("pNum").value;
+			var sNum = document.getElementById("sNum").value;
+			var soma = parseInt(pNum) + parseInt(sNum);
+			document.getElementById("resultadoFinal").innerHTML = 	soma;
+		}
+		function subtrair(){
+			document.getElementById("lblCalculo").innerHTML = "-";
+			var pNum = document.getElementById("pNum").value;
+			var sNum = document.getElementById("sNum").value;
+			var subtracao = parseInt(pNum) - parseInt(sNum);
+			document.getElementById("resultadoFinal").innerHTML = 	subtracao;
+		}
+		function multiplicar(){
+			document.getElementById("lblCalculo").innerHTML = "*";
+			var pNum = document.getElementById("pNum").value;
+			var sNum = document.getElementById("sNum").value;
+			var multiplicacao = parseInt(pNum) * parseInt(sNum);
+			document.getElementById("resultadoFinal").innerHTML = 	multiplicacao;
+		}
+		function dividir(){
+			document.getElementById("lblCalculo").innerHTML = "/";
+			var pNum = document.getElementById("pNum").value;
+			var sNum = document.getElementById("sNum").value;
+			var divisao = parseInt(pNum) / parseInt(sNum);
+			document.getElementById("resultadoFinal").innerHTML = 	divisao;
+		}
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
